@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Life Calendar Wallpaper",
-  description: "Generate a life calendar wallpaper from your birth date and preferred colors.",
+  description: "Hayatını, yılını ve hedeflerini minimal kilit ekranı wallpaperlarına dönüştür.",
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <body>{children}</body>
     </html>
   );

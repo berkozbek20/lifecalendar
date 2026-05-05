@@ -133,7 +133,7 @@ Minimal body:
 - First phase focuses on one grid per wallpaper.
 - The app should send `today` as the user's device-local date on every request.
 - `year` dot count is always the number of days in the current year.
-- `life` dot count is always `lifeYears * 52`.
+- `life` dot count is always `lifeYearsrklı * 52`.
 - `goal` dot count is the number of days between `start` and `target`.
 - Dot size and dot gap are fixed. Short goals do not stretch to fill the screen.
 - If a configured dot size cannot fit the frame, the renderer scales it down only enough to fit.
