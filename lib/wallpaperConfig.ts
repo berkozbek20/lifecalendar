@@ -149,7 +149,8 @@ function asString(value: unknown) {
 }
 
 function sanitizeInteger(value: unknown, fallback: number, min: number, max: number) {
-  const parsed = typeof value === "number" ? value : Number(asString(value));
+  const candidate = asString(value).trim();
+  const parsed = typeof value === "number" ? value : candidate ? Number(candidate) : fallback;
 
   if (!Number.isFinite(parsed)) {
     return fallback;
