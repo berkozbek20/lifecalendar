@@ -355,7 +355,7 @@ function renderLabel(config: ModularWallpaperConfig, grid: TimeGridConfig, model
   }
 
   const theme = resolveGridTheme(config, grid);
-  const fontSize = Math.max(14, Math.min(28, grid.frame.width / 34));
+  const fontSize = Math.max(18, Math.min(36, grid.frame.width / 28));
   const y = Math.min(grid.frame.y + grid.frame.height - 8, fit.y + fit.height + fontSize * 2.35);
 
   return labelTextToSvg.getPath(text, {
