@@ -8,10 +8,9 @@ const defaultAccentColor = "#f97316";
 const labelFontPath = path.join(
   process.cwd(),
   "node_modules",
-  "@fontsource",
-  "roboto",
-  "files",
-  "roboto-latin-ext-400-normal.woff",
+  "dejavu-fonts-ttf",
+  "ttf",
+  "DejaVuSans.ttf",
 );
 const labelTextToSvg = TextToSVG.loadSync(labelFontPath);
 

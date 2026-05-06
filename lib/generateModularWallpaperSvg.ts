@@ -14,10 +14,9 @@ const millisecondsPerWeek = millisecondsPerDay * 7;
 const labelFontPath = path.join(
   process.cwd(),
   "node_modules",
-  "@fontsource",
-  "roboto",
-  "files",
-  "roboto-latin-ext-400-normal.woff",
+  "dejavu-fonts-ttf",
+  "ttf",
+  "DejaVuSans.ttf",
 );
 const labelTextToSvg = TextToSVG.loadSync(labelFontPath);
 

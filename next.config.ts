@@ -2,9 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
-    "/api/wallpaper": [
-      "./node_modules/@fontsource/roboto/files/roboto-latin-ext-400-normal.woff",
-    ],
+    "/api/wallpaper": ["./node_modules/dejavu-fonts-ttf/ttf/DejaVuSans.ttf"],
   },
 };
 
