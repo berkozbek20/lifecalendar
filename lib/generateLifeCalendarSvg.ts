@@ -1,8 +1,19 @@
 import { WallpaperParams } from "./validateWallpaperParams";
+import TextToSVG from "text-to-svg";
+import path from "node:path";
 
 const weeksPerYear = 52;
 const millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
 const defaultAccentColor = "#f97316";
+const labelFontPath = path.join(
+  process.cwd(),
+  "node_modules",
+  "@fontsource",
+  "roboto",
+  "files",
+  "roboto-latin-ext-400-normal.woff",
+);
+const labelTextToSvg = TextToSVG.loadSync(labelFontPath);
 
 type CalendarGrid = {
   columns: number;
@@ -180,10 +191,15 @@ export function generateLifeCalendarSvg(params: WallpaperParams, now = new Date(
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="Life calendar wallpaper">
   <rect width="100%" height="100%" fill="${escapeXml(params.bg)}" />
   ${renderedSections}
-  <text x="${width / 2}" y="${progressY}" text-anchor="middle" fill="${escapeXml(
-    params.filled,
-  )}" opacity="0.68" font-family="Inter, Arial, sans-serif" font-size="${progressSize}" font-weight="500">${escapeXml(
-    progress,
-  )}</text>
+  ${labelTextToSvg.getPath(progress, {
+    x: width / 2,
+    y: progressY,
+    fontSize: progressSize,
+    anchor: "center top",
+    attributes: {
+      fill: escapeXml(params.filled),
+      opacity: "0.68",
+    },
+  })}
 </svg>`;
 }

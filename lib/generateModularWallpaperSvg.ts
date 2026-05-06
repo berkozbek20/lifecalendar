@@ -11,7 +11,14 @@ import path from "node:path";
 const weeksPerYear = 52;
 const millisecondsPerDay = 1000 * 60 * 60 * 24;
 const millisecondsPerWeek = millisecondsPerDay * 7;
-const labelFontPath = path.join(process.cwd(), "node_modules", "text-to-svg", "fonts", "ipag.ttf");
+const labelFontPath = path.join(
+  process.cwd(),
+  "node_modules",
+  "@fontsource",
+  "roboto",
+  "files",
+  "roboto-latin-ext-400-normal.woff",
+);
 const labelTextToSvg = TextToSVG.loadSync(labelFontPath);
 
 type DotGrid = {

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import "@fontsource/roboto/latin-ext-400.css";
+import "@fontsource/roboto/latin-ext-700.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
