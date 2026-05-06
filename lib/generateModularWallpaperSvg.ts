@@ -322,9 +322,9 @@ function renderDots(config: ModularWallpaperConfig, grid: TimeGridConfig, model:
 }
 
 function pluralize(value: number, unit: DotGrid["unit"]) {
-  const singular = unit === "weeks" ? "week" : "day";
+  const unitLabel = unit === "weeks" ? "hafta" : "gün";
 
-  return `${value.toLocaleString("en-US")} ${value === 1 ? singular : `${singular}s`}`;
+  return `${value.toLocaleString("tr-TR")} ${unitLabel}`;
 }
 
 function labelText(grid: TimeGridConfig, model: DotGrid) {
@@ -337,14 +337,14 @@ function labelText(grid: TimeGridConfig, model: DotGrid) {
   }
 
   if (grid.label === "remaining") {
-    return `${pluralize(Math.max(0, model.total - model.current - 1), model.unit)} left`;
+    return `${pluralize(Math.max(0, model.total - model.elapsed), model.unit)} kaldı`;
   }
 
   if (grid.label === "elapsed") {
-    return `${pluralize(model.elapsed, model.unit)} elapsed`;
+    return `${pluralize(model.elapsed, model.unit)} geçti`;
   }
 
-  return `${Math.round((model.elapsed / model.total) * 1000) / 10}% complete`;
+  return `%${Math.round((model.elapsed / model.total) * 1000) / 10} tamamlandı`;
 }
 
 function renderLabel(config: ModularWallpaperConfig, grid: TimeGridConfig, model: DotGrid, fit: FittedDots) {

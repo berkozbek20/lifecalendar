@@ -146,7 +146,7 @@ export function generateLifeCalendarSvg(params: WallpaperParams, now = new Date(
   const totalGridHeight =
     grids.reduce((sum, grid) => sum + grid.height, 0) + sectionGap * Math.max(0, grids.length - 1);
   const startY = Math.max(topOffset, topOffset + (availableHeight - totalGridHeight) / 2);
-  const progress = `${Math.round((livedWeeks / totalWeeks) * 1000) / 10}% complete`;
+  const progress = `%${Math.round((livedWeeks / totalWeeks) * 1000) / 10} tamamlandı`;
   const progressY = Math.min(height - Math.max(70, height * 0.055), startY + totalGridHeight + 48);
   const progressSize = Math.max(18, Math.min(28, width / 48));
 

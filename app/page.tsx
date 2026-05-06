@@ -1,21 +1,21 @@
 const wallpaperExamples = [
   {
-    title: "Yıl takibi",
-    label: "days left",
+    title: "Yıl Takibi",
+    label: "gün kaldı",
     description: "Bugünden yıl sonuna kalan günleri sade bir kilit ekranı olarak gör.",
     image:
       "/api/wallpaper?grid=year&theme=midnight&today=2026-05-06&width=828&height=1792&yearX=92&yearY=550&yearW=644&yearH=700&yearDot=22&yearDotGap=5&label=remaining&v=landing-midnight-year-centered",
   },
   {
-    title: "Hayat takvimi",
-    label: "weeks left",
+    title: "Hayat Takvimi",
+    label: "hafta kaldı",
     description: "Kalan haftalarını daha sakin, daha anlamlı bir arka plana dönüştür.",
     image:
       "/api/wallpaper?grid=life&theme=paper&today=2026-05-06&birth=1990-01-01&life=90&width=828&height=1792&lifeX=60&lifeY=450&lifeW=708&lifeH=980&lifeDot=9&lifeDotGap=4&label=remaining&v=landing-paper-life-centered",
   },
   {
-    title: "90 günlük hedef",
-    label: "days left",
+    title: "Hedef Takvimi",
+    label: "gün kaldı",
     description: "Kısa dönem hedefini her telefonuna baktığında sessizce hatırla.",
     image:
       "/api/wallpaper?grid=goal&theme=midnight&today=2026-05-06&start=2026-05-06&target=2026-08-04&width=828&height=1792&goalX=112&goalY=570&goalW=604&goalH=620&dot=34&dotGap=8&goalLabel=remaining&v=landing-midnight-goal-90-centered",
