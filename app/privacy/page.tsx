@@ -47,7 +47,9 @@ export default function PrivacyPage() {
           <h2>Destek İletişimi</h2>
           <p>
             Destek için bizimle iletişime geçerseniz, yalnızca sizin gönüllü olarak gönderdiğiniz
-            bilgileri yanıt vermek amacıyla kullanırız.
+            bilgileri yanıt vermek amacıyla kullanırız. Destek talepleri için{" "}
+            <a href="mailto:gocumluberkay@gmail.com">gocumluberkay@gmail.com</a> adresine e-posta
+            gönderebilirsiniz.
           </p>
         </section>
 
